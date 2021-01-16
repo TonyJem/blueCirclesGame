@@ -33,11 +33,11 @@ class ViewController: UIViewController {
         move(circle4, with: gesture)
     }
     
-    @IBAction func pan5Action(_ gesture: UIPanGestureRecognizer) {
+    @IBAction private func pan5Action(_ gesture: UIPanGestureRecognizer) {
         move(circle5, with: gesture)
     }
     
-    @IBAction func pan6Action(_ gesture: UIPanGestureRecognizer) {
+    @IBAction private func pan6Action(_ gesture: UIPanGestureRecognizer) {
         move(circle6, with: gesture)
     }
     
