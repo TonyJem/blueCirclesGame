@@ -23,36 +23,42 @@ class ViewController: UIViewController {
         moveView(for: gesture)
         print("1 moved")
         currentChild = circle1
+        hideIfNeeded(justMovedView: circle1)
     }
     
     @IBAction private func pan2Action(_ gesture: UIPanGestureRecognizer) {
         moveView(for: gesture)
         print("2 moved")
         currentChild = circle2
+        hideIfNeeded(justMovedView: circle2)
     }
     
     @IBAction private func pan3Action(_ gesture: UIPanGestureRecognizer) {
         moveView(for: gesture)
         print("3 moved")
         currentChild = circle3
+        hideIfNeeded(justMovedView: circle3)
     }
     
     @IBAction private func pan4Action(_ gesture: UIPanGestureRecognizer) {
         moveView(for: gesture)
         print("4 moved")
         currentChild = circle4
+        hideIfNeeded(justMovedView: circle4)
     }
     
     @IBAction func pan5Action(_ gesture: UIPanGestureRecognizer) {
         moveView(for: gesture)
         print("5 moved")
         currentChild = circle5
+        hideIfNeeded(justMovedView: circle5)
     }
     
     @IBAction func pan6Action(_ gesture: UIPanGestureRecognizer) {
         moveView(for: gesture)
         print("6 moved")
         currentChild = circle6
+        hideIfNeeded(justMovedView: circle6)
     }
     
     private func moveView(for gesture: UIPanGestureRecognizer) {
@@ -66,5 +72,21 @@ class ViewController: UIViewController {
         
         gesture.setTranslation(.zero, in: view)
         guard gesture.state == .ended else { return }
+    }
+    
+    private func hideIfNeeded(justMovedView: UIView) {
+        
+        for circle in circles {
+            if circle == justMovedView {
+                continue
+            }
+            let deltaX = circle.center.x - justMovedView.center.x
+            let deltaY = circle.center.y - justMovedView.center.y
+            let distanceBetweenCenters = (pow(deltaX,2) + pow(deltaY,2)).squareRoot()
+            
+            if distanceBetweenCenters < circle.frame.size.width / 2 {
+                justMovedView.isHidden = true
+            }
+        }
     }
 }
