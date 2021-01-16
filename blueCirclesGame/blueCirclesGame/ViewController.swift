@@ -18,36 +18,30 @@ class ViewController: UIViewController {
     }
     
     @IBAction private func pan1Action(_ gesture: UIPanGestureRecognizer) {
-        moveView(for: gesture)
-        hideIfNeeded(justMovedView: circle1)
+        move(circle1, with: gesture)
     }
     
     @IBAction private func pan2Action(_ gesture: UIPanGestureRecognizer) {
-        moveView(for: gesture)
-        hideIfNeeded(justMovedView: circle2)
+        move(circle2, with: gesture)
     }
     
     @IBAction private func pan3Action(_ gesture: UIPanGestureRecognizer) {
-        moveView(for: gesture)
-        hideIfNeeded(justMovedView: circle3)
+        move(circle3, with: gesture)
     }
     
     @IBAction private func pan4Action(_ gesture: UIPanGestureRecognizer) {
-        moveView(for: gesture)
-        hideIfNeeded(justMovedView: circle4)
+        move(circle4, with: gesture)
     }
     
     @IBAction func pan5Action(_ gesture: UIPanGestureRecognizer) {
-        moveView(for: gesture)
-        hideIfNeeded(justMovedView: circle5)
+        move(circle5, with: gesture)
     }
     
     @IBAction func pan6Action(_ gesture: UIPanGestureRecognizer) {
-        moveView(for: gesture)
-        hideIfNeeded(justMovedView: circle6)
+        move(circle6, with: gesture)
     }
     
-    private func moveView(for gesture: UIPanGestureRecognizer) {
+    private func move(_ justMovedView: UIView, with gesture: UIPanGestureRecognizer) {
         let gestureTranslation = gesture.translation(in: view)
         guard let gestureView = gesture.view else { return }
         
@@ -58,21 +52,33 @@ class ViewController: UIViewController {
         
         gesture.setTranslation(.zero, in: view)
         guard gesture.state == .ended else { return }
+        
+        hideIfNeeded(movedView: justMovedView)
     }
     
-    private func hideIfNeeded(justMovedView: UIView) {
-        
+    private func hideIfNeeded(movedView: UIView) {
         for circle in circles {
-            if circle == justMovedView {
+            if circle == movedView {
                 continue
             }
-            let deltaX = circle.center.x - justMovedView.center.x
-            let deltaY = circle.center.y - justMovedView.center.y
-            let distanceBetweenCenters = (pow(deltaX,2) + pow(deltaY,2)).squareRoot()
+            let deltaX = circle.center.x - movedView.center.x
+            let deltaY = circle.center.y - movedView.center.y
+            let distanceBetweenCenters = (pow(deltaX, 2) + pow(deltaY, 2)).squareRoot()
             
-            if distanceBetweenCenters < circle.frame.size.width / 2 {
-                justMovedView.isHidden = true
+            if distanceBetweenCenters < circle.frame.size.width / 4 {
+                movedView.isHidden = true
+                removeFromCircles(view: movedView)
             }
         }
     }
+    
+    private func removeFromCircles(view: UIView) {
+        for (index, circle) in circles.enumerated() {
+            if circle == view {
+                circles.remove(at: index)
+                break
+            }
+        }
+    }
+    
 }
