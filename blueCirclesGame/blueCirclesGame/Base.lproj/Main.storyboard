@@ -17,30 +17,57 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fv2-Kc-Ucg">
-                                <rect key="frame" x="59" y="180" width="100" height="100"/>
+                                <rect key="frame" x="52" y="108" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="18L-Zl-zLn" appends="YES" id="DEn-rH-Jlp"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Up-Cd-6rR">
-                                <rect key="frame" x="229" y="180" width="100" height="100"/>
+                                <rect key="frame" x="266" y="108" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="3mn-pJ-QEi" appends="YES" id="Eul-xi-hIF"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="94L-EW-gEV">
-                                <rect key="frame" x="144" y="323" width="100" height="100"/>
+                                <rect key="frame" x="157" y="245" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="8UF-Uy-zW9" appends="YES" id="hyO-Wz-e9V"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6hY-3E-sQC">
+                                <rect key="frame" x="52" y="376" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="lTg-d8-Ic8" appends="YES" id="Xfi-Vq-H2o"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aaU-73-RSm">
+                                <rect key="frame" x="266" y="382" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Pi7-bq-ozX" appends="YES" id="dqP-sb-uXu"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UeU-g5-giW">
+                                <rect key="frame" x="157" y="547" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="jEk-3E-Gim" appends="YES" id="Or2-cc-faJ"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -52,17 +79,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="18L-Zl-zLn">
                     <connections>
-                        <action selector="orangePanAction:" destination="BYZ-38-t0r" id="QGS-b6-6ZN"/>
+                        <action selector="pan1Action:" destination="BYZ-38-t0r" id="QGS-b6-6ZN"/>
                     </connections>
                 </panGestureRecognizer>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="3mn-pJ-QEi">
                     <connections>
-                        <action selector="greenPanAction:" destination="BYZ-38-t0r" id="2uj-Fc-d8z"/>
+                        <action selector="pan2Action:" destination="BYZ-38-t0r" id="2uj-Fc-d8z"/>
                     </connections>
                 </panGestureRecognizer>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="8UF-Uy-zW9">
                     <connections>
-                        <action selector="bluePanAction:" destination="BYZ-38-t0r" id="j8n-vR-IcG"/>
+                        <action selector="pan3Action:" destination="BYZ-38-t0r" id="j8n-vR-IcG"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="lTg-d8-Ic8">
+                    <connections>
+                        <action selector="pan4Action:" destination="BYZ-38-t0r" id="QE7-cf-HF9"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Pi7-bq-ozX">
+                    <connections>
+                        <action selector="pan5Action:" destination="BYZ-38-t0r" id="jJO-RV-d6T"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="jEk-3E-Gim">
+                    <connections>
+                        <action selector="pan6Action:" destination="BYZ-38-t0r" id="5r8-CD-DM9"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
@@ -73,14 +115,8 @@
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

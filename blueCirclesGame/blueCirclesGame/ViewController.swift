@@ -6,19 +6,36 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction private func orangePanAction(_ gesture: UIPanGestureRecognizer) {
+    @IBAction private func pan1Action(_ gesture: UIPanGestureRecognizer) {
         moveView(for: gesture)
+        print("1 moved")
     }
     
-    @IBAction private func greenPanAction(_ gesture: UIPanGestureRecognizer) {
+    @IBAction private func pan2Action(_ gesture: UIPanGestureRecognizer) {
         moveView(for: gesture)
+        print("2 moved")
     }
     
     
-    @IBAction private func bluePanAction(_ gesture: UIPanGestureRecognizer) {
+    @IBAction private func pan3Action(_ gesture: UIPanGestureRecognizer) {
         moveView(for: gesture)
+        print("3 moved")
     }
     
+    @IBAction private func pan4Action(_ gesture: UIPanGestureRecognizer) {
+        moveView(for: gesture)
+        print("4 moved")
+    }
+    
+    @IBAction func pan5Action(_ gesture: UIPanGestureRecognizer) {
+        moveView(for: gesture)
+        print("5 moved")
+    }
+    
+    @IBAction func pan6Action(_ gesture: UIPanGestureRecognizer) {
+        moveView(for: gesture)
+        print("6 moved")
+    }
     
     private func moveView(for gesture: UIPanGestureRecognizer) {
         let gestureTranslation = gesture.translation(in: view)
