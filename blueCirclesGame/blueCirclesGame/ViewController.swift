@@ -10,9 +10,12 @@ class ViewController: UIViewController {
     @IBOutlet private weak var circle6: UIView!
     @IBOutlet var circles: [UIView]!
     
+    var activeCircles = [UIView]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        for circle in circles {
+        activeCircles = circles
+        for circle in activeCircles {
             circle.layer.cornerRadius = circle.frame.size.width / 2
         }
     }
@@ -57,7 +60,7 @@ class ViewController: UIViewController {
     }
     
     private func hideIfNeeded(movedView: UIView) {
-        for circle in circles {
+        for circle in activeCircles {
             if circle == movedView {
                 continue
             }
@@ -73,9 +76,9 @@ class ViewController: UIViewController {
     }
     
     private func removeFromCircles(view: UIView) {
-        for (index, circle) in circles.enumerated() {
+        for (index, circle) in activeCircles.enumerated() {
             if circle == view {
-                circles.remove(at: index)
+                activeCircles.remove(at: index)
                 break
             }
         }
