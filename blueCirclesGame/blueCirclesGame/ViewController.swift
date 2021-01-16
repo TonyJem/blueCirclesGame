@@ -60,21 +60,24 @@ class ViewController: UIViewController {
         gesture.setTranslation(.zero, in: view)
         guard gesture.state == .ended else { return }
         
-        hideIfNeeded(movedView: justMovedView)
+        hideIfNeeded(movedCircle: justMovedView)
     }
     
-    private func hideIfNeeded(movedView: UIView) {
+    private func hideIfNeeded(movedCircle: UIView) {
         for circle in activeCircles {
-            if circle == movedView {
+            if circle == movedCircle {
                 continue
             }
-            let deltaX = circle.center.x - movedView.center.x
-            let deltaY = circle.center.y - movedView.center.y
+            let deltaX = circle.center.x - movedCircle.center.x
+            let deltaY = circle.center.y - movedCircle.center.y
             let distanceBetweenCenters = (pow(deltaX, 2) + pow(deltaY, 2)).squareRoot()
             
             if distanceBetweenCenters < circle.frame.size.width / 4 {
-                movedView.isHidden = true
-                removeFromCircles(view: movedView)
+                movedCircle.isHidden = true
+                removeFromCircles(view: movedCircle)
+                increaseSize(for: circle)
+                changeColor(for: circle)
+                break
             }
         }
     }
@@ -88,4 +91,14 @@ class ViewController: UIViewController {
         }
     }
     
+    private func increaseSize(for circle: UIView) {
+        let newSize = circle.frame.size.width * 1.2
+        circle.frame.size.width = newSize
+        circle.frame.size.height = newSize
+        circle.layer.cornerRadius = newSize / 2
+    }
+    
+    private func changeColor(for circle: UIView) {
+        circle.backgroundColor = UIColor.blue
+    }
 }
