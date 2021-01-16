@@ -2,6 +2,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet private weak var circle1: UIView!
+    @IBOutlet private weak var circle2: UIView!
+    @IBOutlet private weak var circle3: UIView!
+    @IBOutlet private weak var circle4: UIView!
+    @IBOutlet private weak var circle5: UIView!
+    @IBOutlet private weak var circle6: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

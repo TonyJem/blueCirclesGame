@@ -75,6 +75,14 @@
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <gestureRecognizers/>
                     </view>
+                    <connections>
+                        <outlet property="circle1" destination="fv2-Kc-Ucg" id="ICT-YG-Olo"/>
+                        <outlet property="circle2" destination="5Up-Cd-6rR" id="eVA-O5-NVs"/>
+                        <outlet property="circle3" destination="94L-EW-gEV" id="aC7-bx-Kpu"/>
+                        <outlet property="circle4" destination="6hY-3E-sQC" id="XHN-Hl-EZv"/>
+                        <outlet property="circle5" destination="aaU-73-RSm" id="Be8-od-YTK"/>
+                        <outlet property="circle6" destination="UeU-g5-giW" id="J6M-7x-SB1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="18L-Zl-zLn">
