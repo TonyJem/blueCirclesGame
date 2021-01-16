@@ -8,6 +8,7 @@ class ViewController: UIViewController {
     @IBOutlet private weak var circle4: UIView!
     @IBOutlet private weak var circle5: UIView!
     @IBOutlet private weak var circle6: UIView!
+    @IBOutlet var circles: [UIView]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
