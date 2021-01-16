@@ -70,6 +70,18 @@
                                     <outletCollection property="gestureRecognizers" destination="jEk-3E-Gim" appends="YES" id="Or2-cc-faJ"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5bm-pt-rfl" customClass="CircleView" customModule="blueCirclesGame" customModuleProvider="target">
+                                <rect key="frame" x="52" y="673" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <gestureRecognizers/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="agR-1O-yfZ" customClass="CircleView" customModule="blueCirclesGame" customModuleProvider="target">
+                                <rect key="frame" x="266" y="673" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <gestureRecognizers/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray2Color"/>
@@ -82,6 +94,8 @@
                         <outlet property="circle4" destination="6hY-3E-sQC" id="XHN-Hl-EZv"/>
                         <outlet property="circle5" destination="aaU-73-RSm" id="Be8-od-YTK"/>
                         <outlet property="circle6" destination="UeU-g5-giW" id="J6M-7x-SB1"/>
+                        <outlet property="circle7" destination="5bm-pt-rfl" id="QaM-Qm-K0w"/>
+                        <outlet property="circle8" destination="agR-1O-yfZ" id="AFR-RU-Yqc"/>
                         <outletCollection property="circles" destination="fv2-Kc-Ucg" collectionClass="NSMutableArray" id="Qfp-JT-OGm"/>
                         <outletCollection property="circles" destination="5Up-Cd-6rR" collectionClass="NSMutableArray" id="LUV-aZ-nv6"/>
                         <outletCollection property="circles" destination="94L-EW-gEV" collectionClass="NSMutableArray" id="YMI-9y-FcD"/>

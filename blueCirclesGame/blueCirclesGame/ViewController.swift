@@ -10,6 +10,9 @@ class ViewController: UIViewController {
     @IBOutlet private weak var circle6: UIView!
     @IBOutlet var circles: [UIView]!
     
+    @IBOutlet weak var circle7: CircleView!
+    @IBOutlet weak var circle8: CircleView!
+    
     var activeCircles = [UIView]()
     
     override func viewDidLoad() {
