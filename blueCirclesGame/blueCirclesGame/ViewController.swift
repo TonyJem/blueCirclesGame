@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         activeCircles = circles
-        roundCornersForAll(activeCircles)
+        roundCorners(for: activeCircles)
     }
     
     @IBAction private func pan1Action(_ gesture: UIPanGestureRecognizer) {
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         move(circle6, with: gesture)
     }
     
-    private func roundCornersForAll(_ circles: [UIView]) {
+    private func roundCorners(for circles: [UIView]) {
         for circle in circles {
             circle.layer.cornerRadius = circle.frame.size.width / 2
         }
