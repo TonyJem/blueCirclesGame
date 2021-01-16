@@ -45,6 +45,15 @@ class ViewController: UIViewController {
         move(circle6, with: gesture)
     }
     
+    @IBAction func pan7Action(_ gesture: UIPanGestureRecognizer) {
+        move(circle7, with: gesture)
+    }
+    
+    @IBAction func pan8Action(_ gesture: UIPanGestureRecognizer) {
+        move(circle8, with: gesture)
+    }
+    
+    
     private func roundCorners(for circles: [UIView]) {
         for circle in circles {
             circle.layer.cornerRadius = circle.frame.size.width / 2
@@ -63,7 +72,7 @@ class ViewController: UIViewController {
         gesture.setTranslation(.zero, in: view)
         guard gesture.state == .ended else { return }
         
-        hideIfNeeded(movedCircle: justMovedView)
+//        hideIfNeeded(movedCircle: justMovedView)
     }
     
     private func hideIfNeeded(movedCircle: UIView) {
